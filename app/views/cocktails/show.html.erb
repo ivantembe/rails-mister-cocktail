@@ -9,26 +9,30 @@
       <h2><%= @cocktail.name %></h2>
     </div>
 
-    <div class="mb-2">
-      <strong>Description:</strong><br>
+    <div class="mb-4 text-secondary">
+      <h5>Description:</h5>
       <% @cocktail.doses.each do |dose| %>
         <%= dose.description %>
       <% end %>
     </div>
 
-    <div class="mb-5">
-      <strong>Ingredients:</strong><br>
+    <div class="mb-2 text-secondary">
+      <h5>Ingredients:</h5>
       <% @cocktail.ingredients.each do |ingredient| %>
-        <%= ingredient.name %>
+        <li class="d-flex justify-content-between">
+          <%= ingredient.name %>
+          <%= link_to 'delete', cocktails_path, class: 'text-danger' %>
+        </li>
       <% end %>
     </div>
 
 
-    <div class="form-actions">
-      <%= link_to 'Add Ingredients', new_cocktail_dose_path(@cocktail.id) %>
+    <div class="form-actions mb-5">
+      <%= link_to 'Add Ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-warning btn-sm'%>
     </div>
-    <div>
-      <%= link_to 'Back to cocktails', cocktails_path %>
+    <div class="text-warning">
+      <i class="fas fa-chevron-left mr-2"></i>
+      <%= link_to 'Back to cocktails', cocktails_path, class: "text-warning" %>
     </div>
   </div>
 </div>
