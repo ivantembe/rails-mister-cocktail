@@ -11,8 +11,23 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-white">
+
+    <nav class="navbar fixed-top text-white bg-dark justify-content-between">
+      <div class="container">
+        <a class="navbar-brand">CockMIx</a>
+        <form class="form-inline">
+          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn btn-warning  my-2 my-sm-0" type="submit">
+            <%= link_to 'Add Cocktail', new_cocktail_path, class: 'text-white'%>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container pt-5">
+      <%= yield %>
+    </div>
 
     <!-- from app/assets/javascripts/application.js -->
     <%= javascript_include_tag "application" %>

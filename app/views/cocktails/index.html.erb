@@ -1,0 +1,20 @@
+<div class="mt-5">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm">
+        <div class="card mb-2" style="width: 18rem;">
+          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <p class="card-text"></p>
+            <%= link_to 'See details', cocktail_path(cocktail), class: 'text-warning'%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
