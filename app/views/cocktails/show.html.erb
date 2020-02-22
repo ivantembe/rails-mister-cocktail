@@ -2,11 +2,11 @@
 <div class="mt-5 d-flex">
 
 
-    <div class="card mb-2" style="width: 24rem;">
-      <%= cl_image_tag @cocktail.photo.key, height: 400, width: 250, crop: :fill, class:  'card-img-top'%>
+    <div class="card mb-2">
+      <%= cl_image_tag @cocktail.photo.key, height: 500, width: 400, crop: :fill, class:  'card-img-top'%>
   </div>
 
-  <div class="ml-5 w-50">
+  <div class="ml-5 pl-5 w-50">
     <div class="border-bottom py-2 mb-4">
       <h2><%= @cocktail.name %></h2>
     </div>
